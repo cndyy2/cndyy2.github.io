@@ -1,0 +1,43 @@
+
+/* navbar*/
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #fff0f3;
+}
+
+ul li {
+  float: left;
+}
+
+ul li a {
+  display: block;
+  color: #520918;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+ul li a:hover {
+  background-color: #fff7f7;
+}
+/* Boite page voyage*/
+.joli {
+  padding: 5em;
+  width: 100%;
+  height: 200px;
+  box-sizing: border-box;
+
+background-image: url('https://lh3.googleusercontent.com/proxy/oX3RB4gyOGo6Lwcl8DJrCs1BLkfx706SWW-V-sF_HtkEqJneNgTbVetY8Xi50stclp1crXKAkCn7dlCQshlDfK9vl2ysjkSFZmWcIn55Tb0VBJM')}
+
+/* tableaux*/
+table {
+  border-collapse: collapse;
+}
+
+/* texte*/
+p, h1, h3, table { font-family: Garamond; color: #520918;}
+p
+</style>
