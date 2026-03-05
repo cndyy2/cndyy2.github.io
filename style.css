@@ -22,6 +22,27 @@ ul li a {
 
 ul li a:hover {
   background-color: #fff7f7;
+  
+ .menubio {
+		  list-style-type: none;
+		  margin: 0;
+		  padding: 0;
+		  width: 200px;
+		  background-color: #f1f1f1;
+		}
+
+		li a {
+		  display: block;
+		  color: black;
+		  padding: 8px 16px;
+		  text-decoration: none;
+		}
+
+		/* Change the link and background color on hover */
+		li a:hover {
+		  background-color: #555555;
+		  color: white;
+		}
 }
 /* Boite page voyage*/
 .joli {
@@ -36,8 +57,40 @@ background-image: url('https://lh3.googleusercontent.com/proxy/oX3RB4gyOGo6Lwcl8
 table {
   border-collapse: collapse;
 }
+img {
+  border-radius: 15px;
+   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
 
 /* texte*/
-p, h1, h3, table { font-family: Garamond; color: #520918;}
-p
+p, h1, h2, h3, table { font-family: Garamond; color: #520918;}
+p{font-size: 25px;}
+
+/*galerie d'images */
+/* source: https://www.w3schools.com/css/css_image_gallery.asp */
+div.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+div.gallery-item {
+  margin: 5px;
+  border: 1px solid #ccc;
+  width: 180px;
+}
+
+div.gallery-item:hover {
+  border: 1px solid #777;
+}
+
+div.gallery-item img {
+  width: 100%;
+  height: auto;
+}
+
+div.gallery-item div.desc {
+  padding: 15px;
+  text-align: center;
+}
 </style>
