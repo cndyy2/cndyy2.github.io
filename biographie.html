@@ -7,32 +7,82 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>biographie</title>
-		<link rel="stylesheet" href="style.css"
+		<style>
+		/*navbar horizontale*/
+		.menu {
+		  list-style-type: none;
+		  margin: 0;
+		  padding: 0;
+		  overflow: hidden;
+		  background-color: #fff0f3;
+		}
+
+		.menu li {
+		  float: left;
+		}
+
+		.menu li a {
+		  display: block;
+		  color: #520918;
+		  text-align: center;
+		  padding: 14px 16px;
+		  text-decoration: none;
+		}
+
+		.menu li a:hover {
+		  background-color: #fff7f7;
+		  
+		/*navbar horizontale*/
+		.menubio {
+		  list-style-type: none;
+		  margin: 0;
+		  padding: 0;
+		  width: 200px;
+		  background-color: #f1f1f1;
+		}
+
+		 li a {
+		  display: block;
+		  color: black;
+		  padding: 8px 16px;
+		  text-decoration: none;
+		}
+
+		/* Change the link and background color on hover */
+		 li a:hover {
+		  background-color: #555555;
+		  color: white;
+		}
+		p, h1, h2, h3, table { font-family: Garamond; color: #520918;}
+		p{font-size: 25px;}
+		</style>
 	</head>
 	
 	<body style="background-color: #fffcfd;">
 	
-		<ul class="texte">
-			  <li><a href="index.html">Accueil</a></li>
-			  <li><a href="poeme.html">Poème</a></li>
-			  <li><a href="voyage.html">Mon voyage de rêve</a></li>
-			  <li><a href="biographie.html">Biographie</a></li>
+		<ul class="menu">
+		  <li><a href="index.html">Accueil</a></li>
+		  <li><a href="poeme.html">Poème</a></li>
+		  <li><a href="voyage.html">Mon voyage de rêve</a></li>
+		  <li><a href="biographie.html">Biographie</a></li>
 		</ul>
  <!--menu-->
-		<ul id="menubio">
-			  <li><a href="apropos">À propos</a></li>
-			  <li><a href="lien">Mes liens préférés</a></li>
-			  <li><a href="tableau">Mes compétences</a></li>
+		<ul class="menubio">
+			  <li><a href="#apropos">À propos</a></li>
+			  <li><a href="#lien">Mes liens préférés</a></li>
+			  <li><a href="#tableau">Mes compétences</a></li>
 		</ul>
  
  
-		<h1 href="#apropos">À propos de moi</h1>
-		<p>Je </p>
-		<p>2e paragraphe : Blah! Blah! Blah!</p>
+		<a name="apropos"><h1>À propos de moi</h1></a>
+		<p>Image qui me représente </p>
+		<p>Je m'appelle Cndyy et je suis passionée par les sciences. Plus tard j'aimerais devenir ingénieure biomédical.  </p>
 		
-		
+<!--mes liens préférés-->
+ <a name="tableau"> <h1 > Mes liens préférés </h1> </a>
+ <p> Durant mon tmeps libre, je pass le temps en écoutant des films et séries sur netflix. Une autre chose que j'adore est commander à manger. avec plus de 100 commandes à mon actif je dirais que Uber Eats fait parti de moi. 
  <!--mon tableau de connaissances en languages de programmation-->
- <P> <h2 href="#tableau"> Mes connaissances en languages de programmation</h2>
+ <a name="tableau"> <P> <h1> Mes connaissances en languages de programmation</h1> </a>
 	<table class="texte" border="1" cellpadding="5" cellspacing="5">
 	 <tr>
 		    <th colspan="2" rowspan="2"> language</th>
