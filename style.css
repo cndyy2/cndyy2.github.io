@@ -1,6 +1,6 @@
-
-/* navbar*/
-ul {
+/* navbars horizontales*/
+/*https://www.w3schools.com/css/css_navbar_horizontal.asp*/
+.menu {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -8,7 +8,7 @@ ul {
   background-color: #fff0f3;
 }
 
-ul li {
+.menu li {
   float: left;
 }
 
@@ -20,31 +20,12 @@ ul li a {
   text-decoration: none;
 }
 
-ul li a:hover {
+.menu li a:hover {
   background-color: #fff7f7;
-  
- .menubio {
-		  list-style-type: none;
-		  margin: 0;
-		  padding: 0;
-		  width: 200px;
-		  background-color: #f1f1f1;
-		}
-
-		li a {
-		  display: block;
-		  color: black;
-		  padding: 8px 16px;
-		  text-decoration: none;
-		}
-
-		/* Change the link and background color on hover */
-		li a:hover {
-		  background-color: #555555;
-		  color: white;
-		}
 }
+  
 /* Boite page voyage*/
+/*source: https://developer.mozilla.org/fr/docs/Learn/CSS/Howto/create_fancy_boxes */
 .joli {
   padding: 5em;
   width: 100%;
@@ -57,6 +38,7 @@ background-image: url('https://lh3.googleusercontent.com/proxy/oX3RB4gyOGo6Lwcl8
 table {
   border-collapse: collapse;
 }
+/* ombre images*/
 img {
   border-radius: 15px;
    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
