@@ -41,11 +41,11 @@ table {
 /* ombre images*/
 img {
   border-radius: 15px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 /* texte*/
-p, h1, h2, h3, table, { font-family: Garamond; color: #520918;}
+p, h1, h2, h3, table { font-family: Garamond; color: #520918;}
 p{font-size: 25px;}
 
 /*galerie d'images */
