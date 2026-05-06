@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>QUIZ_ICS</title>
+  <style>
+    body { font-family: Arial; margin: 20px; }
+  </style>
+</head>
+<body>
+
+<h1>Programme - QUIZ_ICS3U</h1>
+
+<form>
+
+<label>Nom:</label>
+<input type="text" id="txtNom">
+<br><br>
+
+<!-- Q1 -->
+<label>1. Quel langage structure une page web?</label><br>
+<input type="radio" name="q1" value="CSS">CSS<br>
+<input type="radio" name="q1" value="HTML">HTML<br>
+<input type="radio" name="q1" value="Python">Python<br>
+<p id="r1"></p>
+
+<!-- Q2 -->
+<label>2. Langages enseignés en ICS3U?</label><br>
+<input type="checkbox" name="q2" value="HTML">HTML<br>
+<input type="checkbox" name="q2" value="CSS">CSS<br>
+<input type="checkbox" name="q2" value="JavaScript">JavaScript<br>
+<input type="checkbox" name="q2" value="Python">Python<br>
+<p id="r2"></p>
+
+<!-- Q3 -->
+<label>3. JavaScript sert à:</label><br>
+<select id="q3">
+  <option value="">--Choisir--</option>
+  <option value="style">Styliser</option>
+  <option value="structure">Structurer</option>
+  <option value="interaction">Ajouter de l'interactivité</option>
+</select>
+<p id="r3"></p>
+
+<!-- Q4 -->
+<label>4. Quelle balise HTML est utilisée pour un titre principal?</label><br>
+<input type="text" id="q4">
+<p id="r4"></p>
+
+<!-- Q5 -->
+<label>5. Quel mot-clé sert à déclarer une variable en JavaScript?</label><br>
+<input type="radio" name="q5" value="let">let<br>
+<input type="radio" name="q5" value="int">int<br>
+<input type="radio" name="q5" value="string">string<br>
+<p id="r5"></p>
+
+<br>
+<input type="button" value="Soumettre" onclick="corrigerQuiz()">
+
+</form>
+
+<div id="resultat"></div>
+
+<script>
+function corrigerQuiz() {
+    var score = 0;
+    var total = 5;
+
+    var nom = document.getElementById("txtNom").value;
+
+    // Q1
+    var q1 = document.getElementsByName("q1");
+    var bonneQ1 = false;
+    for (var i = 0; i < q1.length; i++) {
+        if (q1[i].checked && q1[i].value === "HTML") {
+            bonneQ1 = true;
+        }
+    }
+    
+    document.getElementById("r1").className = bonneQ1 ? "bon" : "faux";
+    if (bonneQ1) score++;
+
+    // Q2
+    var q2 = document.getElementsByName("q2");
+    var bonnes = ["HTML","CSS","JavaScript"];
+    var correct = 0;
+    var faux = false;
+
+    for (var i = 0; i < q2.length; i++) {
+        if (q2[i].checked) {
+            if (bonnes.includes(q2[i].value)) {
+                correct++;
+            } else {
+                faux = true;
+            }
+        }
+    }
+
+    var bonneQ2 = (correct === 3 && !faux);
+    
+    document.getElementById("r2").className = bonneQ2 ? "bon" : "faux";
+    if (bonneQ2) score++;
+
+    // Q3
+    var q3 = document.getElementById("q3").value;
+    var bonneQ3 = (q3 === "interaction");
+    
+    document.getElementById("r3").className = bonneQ3 ? "bon" : "faux";
+    if (bonneQ3) score++;
+
+      // Q4
+       var q4 = document.getElementById("q4").value.toLowerCase();
+      var bonneQ4 = (q4 === "h1" || q4 === "<h1>");
+    
+      document.getElementById("r4").className = bonneQ4 ? "bon" : "faux";
+      if (bonneQ4) score++;
+
+        // Q5
+     var q5 = document.getElementsByName("q5");
+     var bonneQ5 = false;
+
+     for (var i = 0; i < q5.length; i++) {
+            if (q5[i].checked && q5[i].value === "let") {
+               bonneQ5 = true;
+            }
+     }
+
+    
+      document.getElementById("r5").className = bonneQ5 ? "bon" : "faux";
+       if (bonneQ5) score++;
+
+     // Résultat final
+     var message = "<h2>Résultat</h2>";
+     message += "Nom: " + nom + "<br>";
+     message += "Score: " + score + "/" + total + "<br>";
+
+        document.getElementById("resultat").innerHTML = message;
+
+
+    }
+    </script>
+
+    </body>
+</html>
+
+
