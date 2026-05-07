@@ -1,22 +1,16 @@
+<!-- Page options salle d'opération -->
+<!-- Par BioFusion-->
+
 <!DOCTYPE html>
 
-<html>
-  
-  <head>
-    
+<head>
     <meta charset="UTF-8">
-		<title>BioFusion</title>
-    <link rel="stylesheet" href="styles.css" />
+    <title>Options</title>
     <style>
         
       /* code CSS pour embellir les boutons du menu*/
       /* source : https://getcssscan.com/css-buttons-examples */
-
-      body {
-        background-image: url("images/2112.jpg");
-        background-size: 100% auto
-      }
-      .btnMenu {
+      .btnOptions {
         align-items: center;
         appearance: none;
         background-color: #FCFCFD;
@@ -44,40 +38,26 @@
         will-change: box-shadow,transform;
       }
       
-      .btnMenu:focus {
+      .btnOptions:focus {
         box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
       }
       
-      .btnMenu:hover {
+      .btnOptions:hover {
         box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
         transform: translateY(-2px);
       }
       
-      .btnMenu:active {
+      .btnOptions:active {
         box-shadow: #D6D6E7 0 3px 7px inset;
         transform: translateY(2px);
       }
-      </style>
+
+    </style>
 </head>
-  <body>
-		
-		<center>
-		  
-		  <!-- Titre pour la page  -->
-		  <h1>Instructions</h1>
-		  <br>
-		  
-		  <!-- Mot de bienvenue -->
-		  <p id="paragraphe">Bienvenue à la salle d'opération BioFusion! Êtes-vous prêts à sauver notre patient?</p>
-		  <p id="paragraphe">C'est très simple, il faut juste que vous vous concentrez. D'abord, cliquez sur le bouton « Jouer ».</p>
-		  <p id="paragraphe">Ensuite, choissisez soit l'option 1 ou l'option 2.</p>
-		  <p id="paragraphe">Si vous choississez la première option, vous devez nommer les différents organes de notre patient.</p>
-		  <p id="paragraphe">Si vous choississez la deuxième option, vous devez répondre aux différentes question concernant ses organes.</p>
-		  <p id="paragraphe">ATTENTION! Si vous avez 3 ou plus erreurs, voutre patient va mourir! On compte sur vous!</p>
-		  <p id="paragraphe">Bonne chance!</p>
-		  
-		  
-		</center>
-      <button class="btnMenu" onclick="window.location.href='index.html'"><img src="https://cdn-icons-png.flaticon.com/512/5895/5895964.png" height="35px"></button>
-  </body>
-</html>
+
+<body style="background-image: url('image.jpg'); height: 100%;" >
+
+  <center><h1>Options</h1> <br><br>
+  <!-- source: https://www.w3schools.com/js/js_window_location.asp -->
+  <button class="btnOptions" onclick="window.location.href='jeu1.html'"><b>Jeu 1</b></button>
+  <button class="btnOptions" onclick="window.location.href='jeu2.html'"><b>Jeu 2</b></button><br><br>
