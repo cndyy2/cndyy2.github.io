@@ -1,146 +1,68 @@
+<!-- Page accueil salle d'opération -->
+<!-- Par BioFusion-->
+
 <!DOCTYPE html>
-<html>
+
 <head>
-  <meta charset="utf-8">
-  <title>QUIZ_ICS</title>
-  <style>
-    body { font-family: Arial; margin: 20px; }
-  </style>
+    <meta charset="UTF-8">
+    <title>Accueil</title>
+    <style>
+        
+      /* code CSS pour embellir les boutons du menu*/
+      /* source : https://getcssscan.com/css-buttons-examples */
+      .btnMenu {
+        align-items: center;
+        appearance: none;
+        background-color: #FCFCFD;
+        border-radius: 4px;
+        border-width: 0;
+        box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,rgba(45, 35, 66, 0.3) 0 7px 13px -3px,#D6D6E7 0 -3px 0 inset;
+        box-sizing: border-box;
+        cursor: pointer;
+        display: inline-flex;
+        height: 48px;
+        justify-content: center;
+        line-height: 1;
+        list-style: none;
+        overflow: hidden;
+        padding-left: 16px;
+        padding-right: 16px;
+        position: relative;
+        text-align: left;
+        text-decoration: none;
+        transition: box-shadow .15s,transform .15s;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        white-space: nowrap;
+        will-change: box-shadow,transform;
+      }
+      
+      .btnMenu:focus {
+        box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+      }
+      
+      .btnMenu:hover {
+        box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+        transform: translateY(-2px);
+      }
+      
+      .btnMenu:active {
+        box-shadow: #D6D6E7 0 3px 7px inset;
+        transform: translateY(2px);
+      }
+
+    </style>
 </head>
-<body>
 
-<h1>Programme - QUIZ_ICS3U</h1>
+<body style="background-image: url('image.jpg'); height: 100%;" >
 
-<form>
-
-<label>Nom:</label>
-<input type="text" id="txtNom">
-<br><br>
-
-<!-- Q1 -->
-<label>1. Quel langage structure une page web?</label><br>
-<input type="radio" name="q1" value="CSS">CSS<br>
-<input type="radio" name="q1" value="HTML">HTML<br>
-<input type="radio" name="q1" value="Python">Python<br>
-<p id="r1"></p>
-
-<!-- Q2 -->
-<label>2. Langages enseignés en ICS3U?</label><br>
-<input type="checkbox" name="q2" value="HTML">HTML<br>
-<input type="checkbox" name="q2" value="CSS">CSS<br>
-<input type="checkbox" name="q2" value="JavaScript">JavaScript<br>
-<input type="checkbox" name="q2" value="Python">Python<br>
-<p id="r2"></p>
-
-<!-- Q3 -->
-<label>3. JavaScript sert à:</label><br>
-<select id="q3">
-  <option value="">--Choisir--</option>
-  <option value="style">Styliser</option>
-  <option value="structure">Structurer</option>
-  <option value="interaction">Ajouter de l'interactivité</option>
-</select>
-<p id="r3"></p>
-
-<!-- Q4 -->
-<label>4. Quelle balise HTML est utilisée pour un titre principal?</label><br>
-<input type="text" id="q4">
-<p id="r4"></p>
-
-<!-- Q5 -->
-<label>5. Quel mot-clé sert à déclarer une variable en JavaScript?</label><br>
-<input type="radio" name="q5" value="let">let<br>
-<input type="radio" name="q5" value="int">int<br>
-<input type="radio" name="q5" value="string">string<br>
-<p id="r5"></p>
-
-<br>
-<input type="button" value="Soumettre" onclick="corrigerQuiz()">
-
-</form>
-
-<div id="resultat"></div>
-
-<script>
-function corrigerQuiz() {
-    var score = 0;
-    var total = 5;
-
-    var nom = document.getElementById("txtNom").value;
-
-    // Q1
-    var q1 = document.getElementsByName("q1");
-    var bonneQ1 = false;
-    for (var i = 0; i < q1.length; i++) {
-        if (q1[i].checked && q1[i].value === "HTML") {
-            bonneQ1 = true;
-        }
-    }
-    
-    document.getElementById("r1").className = bonneQ1 ? "bon" : "faux";
-    if (bonneQ1) score++;
-
-    // Q2
-    var q2 = document.getElementsByName("q2");
-    var bonnes = ["HTML","CSS","JavaScript"];
-    var correct = 0;
-    var faux = false;
-
-    for (var i = 0; i < q2.length; i++) {
-        if (q2[i].checked) {
-            if (bonnes.includes(q2[i].value)) {
-                correct++;
-            } else {
-                faux = true;
-            }
-        }
-    }
-
-    var bonneQ2 = (correct === 3 && !faux);
-    
-    document.getElementById("r2").className = bonneQ2 ? "bon" : "faux";
-    if (bonneQ2) score++;
-
-    // Q3
-    var q3 = document.getElementById("q3").value;
-    var bonneQ3 = (q3 === "interaction");
-    
-    document.getElementById("r3").className = bonneQ3 ? "bon" : "faux";
-    if (bonneQ3) score++;
-
-      // Q4
-       var q4 = document.getElementById("q4").value.toLowerCase();
-      var bonneQ4 = (q4 === "h1" || q4 === "<h1>");
-    
-      document.getElementById("r4").className = bonneQ4 ? "bon" : "faux";
-      if (bonneQ4) score++;
-
-        // Q5
-     var q5 = document.getElementsByName("q5");
-     var bonneQ5 = false;
-
-     for (var i = 0; i < q5.length; i++) {
-            if (q5[i].checked && q5[i].value === "let") {
-               bonneQ5 = true;
-            }
-     }
-
-    
-      document.getElementById("r5").className = bonneQ5 ? "bon" : "faux";
-       if (bonneQ5) score++;
-
-     // Résultat final
-     var message = "<h2>Résultat</h2>";
-     message += "Nom: " + nom + "<br>";
-     message += "Score: " + score + "/" + total + "<br>";
-
-        document.getElementById("resultat").innerHTML = message;
+  <center><h1> La salle d'opération</h1> <br><br>
+  <!-- source: https://www.w3schools.com/js/js_window_location.asp -->
+  <button class="btnMenu" onclick="window.location.href='index.html'"><b>Jouer</b></button><br><br>
+  <button class="btnMenu" onclick="window.location.href='instruction.html'"><b>Instruction</b></button><br><br>
+  <button class="btnMenu" onclick="window.location.href='parametres.html'"> <img src="https://cdn-icons-png.flaticon.com/512/563/563541.png" height="35px"> </button><br><br></center>
 
 
-    }
-    </script>
-
-    </body>
+</body>
 </html>
-
-
